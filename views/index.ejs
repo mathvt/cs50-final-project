@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <script>let goodname = true;</script>
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="stylesheets/style.css" rel="stylesheet">
+
+        <title><%= title %></title>
+
+    </head>
+
+    <body>
+        <div id="option">
+            <div id="askname">
+                <form method="POST" action="/" onsubmit=onssubmit()>
+                    <%if (invalidname) { %>
+                        <script>goodname = false;</script>
+                        <p style="color:red"> name already used</p> 
+                    <% } %>
+                    <input type="text" placeholder="name" name="name">
+                </form>
+            </div>
+        </div>
+        <div id='wait'>
+            <p style="font-size: 2em;">WAITING FOR PLAYER</p>
+        </div>
+
+        <div id="som">
+            <button class="point" onclick="location.href='/solo'">solo</button>
+            <button class="point" onclick=askname()>multi</button>
+        </div>
+
+
+        <form id="myForm" action="/" method="post" style="display:none">
+
+            <input id="params" name="params">
+
+        </form>
+
+        <script src="javascripts/script.js"></script>
+
+    </body>
+
+</html>

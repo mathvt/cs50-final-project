@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="stylesheets/style.css" rel="stylesheet">
+
+        <title><%= title %></title>
+
+    </head>
+
+<body>
+
+    <div style="display: flex;" id="info">
+        <div class="infom">
+            <p id="me"></p>
+            <p id="sme" style="margin-left: 10px;"></p>
+        </div>
+        <div class="infom">
+            <p id="him"></p>
+            <p id="shim" style="margin-left: 10px;"></p>
+        </div>
+        <p id="time" class="infom"></p>
+        <button class="info" style="display: none;" id="restart" onclick=restart()>play again?</button>
+    </div>
+        <p id="leavemsg"></p>
+    </div>
+    
+
+
+    <div id="main"></div>
+
+
+
+    <div id="haveleftmsg" style="display: none;">
+        <p>your oppoment fled !</p>
+        <form method="GET" action="/">
+            <button type="submit">return to menu</button>
+        </form>
+        <p> or reload the page to look for another opponent.</p>
+    </div>
+
+    <script src="javascripts/multi.js"></script>
+</body>
+
+</html>
